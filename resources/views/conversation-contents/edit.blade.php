@@ -32,7 +32,7 @@
                 </div>
 
                 <div>
-                    <label for="text_ksa" class="block text-gray-700 font-semibold mb-2">Teks Bahasa KSA</label>
+                    <label for="text_ksa" class="block text-gray-700 font-semibold mb-2">Teks Bahasa Arab</label>
                     <textarea name="text_ksa" id="text_ksa" rows="3" required
                         class="w-full border border-gray-300 rounded px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">{{ $content->text_ksa }}</textarea>
                 </div>

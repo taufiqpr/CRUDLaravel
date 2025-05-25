@@ -6,7 +6,7 @@
             </h2>
                 @if ($histories->count())
                     <a href="{{ route('history.index') }}" class="text-sm text-blue-600 hover:underline">
-                        💬 Lihat Semua Riwayat Percakapan
+                        💬 History Story
                     </a>
                 @else
                     <p class="text-sm text-gray-500">Belum ada riwayat percakapan.</p>

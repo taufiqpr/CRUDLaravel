@@ -33,7 +33,7 @@
                 </div>
 
                 <div class="mb-4">
-                    <label for="text_ksa" class="block font-medium text-sm text-gray-700">Teks Bahasa KSA</label>
+                    <label for="text_ksa" class="block font-medium text-sm text-gray-700">Teks Bahasa Arab</label>
                     <textarea name="text_ksa" id="text_ksa" rows="2" required
                         class="form-textarea mt-1 block w-full border border-gray-300 rounded-md shadow-sm
                                focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"></textarea>

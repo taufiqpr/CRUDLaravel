@@ -26,14 +26,14 @@
 
                             <div class="space-y-6">
                                 <div>
-                                    <label for="text_ksa" class="block text-sm font-medium text-gray-700">Text KSA</label>
+                                    <label for="text_ksa" class="block text-sm font-medium text-gray-700">Text Bahasa Arab</label>
                                     <textarea id="text_ksa" name="text_ksa" rows="3"
                                         class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring focus:ring-blue-200"
                                         required>{{ old('text_ksa') }}</textarea>
                                 </div>
 
                                 <div>
-                                    <label for="text_idn" class="block text-sm font-medium text-gray-700">Text IDN</label>
+                                    <label for="text_idn" class="block text-sm font-medium text-gray-700">Text Bahasa Indonesia</label>
                                     <textarea id="text_idn" name="text_idn" rows="3"
                                         class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring focus:ring-blue-200"
                                         required>{{ old('text_idn') }}</textarea>
@@ -44,6 +44,9 @@
                                     <input type="file" id="audio" name="audio" accept="audio/*"
                                         class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring focus:ring-blue-200"
                                         required>
+                                            @error('audio')
+        <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+    @enderror
                                 </div>
                             </div>
 

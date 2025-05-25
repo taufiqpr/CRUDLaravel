@@ -14,14 +14,12 @@
                 + Tambah Konten Cerita
             </a>
 
-            <p class="mb-6 text-gray-700">{{ $story->desc }}</p>
-
             <h3 class="text-lg font-semibold mb-4 border-b pb-2">Konten Cerita:</h3>
 
             @forelse ($story->contents as $content)
                 <div class="mb-8 p-4 border rounded shadow-sm">
-                    <p><strong>Text KSA:</strong> {{ $content->text_ksa }}</p>
-                    <p><strong>Text IDN:</strong> {{ $content->text_idn }}</p>
+                    <p><strong>Text Bahasa Arab:</strong> {{ $content->text_ksa }}</p>
+                    <p><strong>Text Bahasa Indonesia:</strong> {{ $content->text_idn }}</p>
                     <p><strong>Audio:</strong></p>
                     <audio controls class="mb-3 w-full max-w-md">
                         <source src="{{ asset('storage/' . $content->audio) }}" type="audio/mpeg">

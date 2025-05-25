@@ -14,8 +14,6 @@
                 + Tambah Konten
             </a>
 
-            <p class="text-gray-700 mb-6">{{ $conversation->desc }}</p>
-
             <h3 class="font-semibold text-lg mb-4 border-b pb-2">Isi Percakapan:</h3>
 
             @if($conversation->contents->count())

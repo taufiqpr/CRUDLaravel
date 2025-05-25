@@ -30,7 +30,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('conversations', ConversationController::class);
     Route::resource('conversation-contents', ConversationContentController::class);
     Route::get('/histories', [HistoryStoryController::class, 'index'])->name('history.index');
-    Route::get('/history/{id}', [App\Http\Controllers\HistoryStoryController::class, 'show'])->name('history.show');
+    Route::get('/history/{id}', [HistoryStoryController::class, 'show'])->name('history.show');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

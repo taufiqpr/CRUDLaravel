@@ -29,7 +29,7 @@
 
                                 <!-- Text KSA -->
                                 <div>
-                                    <label for="text_ksa" class="block text-sm font-medium text-gray-700">Text KSA</label>
+                                    <label for="text_ksa" class="block text-sm font-medium text-gray-700">Text Bahasa Arab</label>
                                     <textarea id="text_ksa" name="text_ksa" rows="3"
                                         class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring focus:ring-blue-200"
                                         required>{{ old('text_ksa', $story->text_ksa) }}</textarea>
@@ -37,7 +37,7 @@
 
                                 <!-- Text IDN -->
                                 <div>
-                                    <label for="text_idn" class="block text-sm font-medium text-gray-700">Text IDN</label>
+                                    <label for="text_idn" class="block text-sm font-medium text-gray-700">Text Bahasa Indonesia</label>
                                     <textarea id="text_idn" name="text_idn" rows="3"
                                         class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring focus:ring-blue-200"
                                         required>{{ old('text_idn', $story->text_idn) }}</textarea>
