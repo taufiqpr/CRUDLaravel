@@ -49,7 +49,7 @@ public function create(Request $request)
             'conversations_id' => $request->conversations_id,
         ]);
 
-        return redirect()->route('conversations.index')->with('success', 'Conversation berhasil dibuat!');
+        return redirect()->route('conversations.show', $request->conversations_id)->with('success', 'Conversation berhasil dibuat!');
     }
 
     public function edit($id)
@@ -84,7 +84,7 @@ public function create(Request $request)
         $content->speaker = $request->speaker;
         $content->save();
 
-        return redirect()->route('conversations.index')->with('success', 'Conversation berhasil diperbarui!');
+        return redirect()->route('conversations.show', $content->id)->with('success', 'Conversation berhasil diperbarui!');
     }
 
     public function destroy($id)

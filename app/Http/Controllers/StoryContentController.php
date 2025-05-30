@@ -25,7 +25,7 @@ class StoryContentController extends Controller
         $request->validate([
             'text_ksa' => 'required',
             'text_idn' => 'required',
-            'audio' => 'required|file|mimes:mp3,wav,ogg',
+            'audio' => 'file|mimes:mp3,wav,ogg',
         ]);
 
         $audioPath = $request->file('audio')->store('audio', 'public');
@@ -37,7 +37,7 @@ class StoryContentController extends Controller
             'stories_id' => $storyId,
         ]);
 
-        return redirect()->route('stories.index')->with('success', 'Story created!');
+        return redirect()->route('stories.show', $storyId)->with('success', 'Story created!');
     }
 
 
@@ -74,7 +74,7 @@ class StoryContentController extends Controller
 
         $story->update($data);
 
-        return redirect()->route('stories.index')->with('success', 'Story updated!');
+        return redirect()->route('stories.show', $story->stories_id)->with('success', 'Story updated!');
     }
 
 

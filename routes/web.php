@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\StoryController;
 use App\Http\Controllers\HistoryStoryController;
+use App\Http\Controllers\HistoryConversationController;
 use App\Http\Controllers\StoryContentController;
 use App\Http\Controllers\ConversationController;
 use App\Http\Controllers\ConversationContentController;
@@ -31,6 +32,9 @@ Route::middleware('auth')->group(function () {
     Route::resource('conversation-contents', ConversationContentController::class);
     Route::get('/histories', [HistoryStoryController::class, 'index'])->name('history.index');
     Route::get('/history/{id}', [HistoryStoryController::class, 'show'])->name('history.show');
+    Route::delete('/histories/{id}', [HistoryStoryController::class, 'destroy'])->name('histories.destroy');
+    Route::get('/history-conversations', [HistoryConversationController::class, 'index'])->name('history_conversations.index');
+    Route::delete('/history-conversations/{id}', [HistoryConversationController::class, 'destroy'])->name('history_conversations.destroy');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

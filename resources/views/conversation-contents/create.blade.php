@@ -52,8 +52,8 @@
                         class="block w-full mt-1 border border-gray-300 rounded-md shadow-sm
                                focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />
                                 @error('audio')
-        <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
-    @enderror
+                                    <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
+                                @enderror
                 </div>
 
                 <div class="mt-6 d-flex justify-content-end gap-2">

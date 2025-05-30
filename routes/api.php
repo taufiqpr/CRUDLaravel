@@ -9,6 +9,7 @@ use App\Http\Controllers\ConversationContentApiController;
 use App\Http\Controllers\AuthApiController;
 
 Route::post('/login', [AuthApiController::class, 'login']);
+Route::post('/register', [AuthApiController::class, 'register']);
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/user', function (Request $request) {

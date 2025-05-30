@@ -45,8 +45,8 @@
                                         class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring focus:ring-blue-200"
                                         required>
                                             @error('audio')
-        <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
-    @enderror
+                                                <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                                            @enderror
                                 </div>
                             </div>
 

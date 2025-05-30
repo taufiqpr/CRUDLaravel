@@ -16,4 +16,13 @@ public function index()
 
     return view('histories.index', compact('histories'));
 }
+
+public function destroy($id)
+{
+    $history = HistoryStory::where('user_id', auth()->id())->findOrFail($id);
+    $history->delete();
+
+    return redirect()->back()->with('success', 'Riwayat berhasil dihapus.');
+}
+
 }
